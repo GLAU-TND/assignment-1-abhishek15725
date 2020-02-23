@@ -1,5 +1,7 @@
 package adt;
 
+import definition.Person;
+
 public interface ContactListADT<person> {
 
         boolean add(Person person);
