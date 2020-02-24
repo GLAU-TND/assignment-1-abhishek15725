@@ -3,7 +3,7 @@ package definition;
 import adt.ContactListADT;
 import java.util.ArrayList;
 
-public class ContactList<person> implements ContactListADT<person> {
+public class ContactList<Person> implements ContactListADT<Person> {
     ArrayList arrayOfNames = new ArrayList<String>();
     ArrayList arrayOfFirstName = new ArrayList<String>();
     private Node<Person> head;
