@@ -11,7 +11,6 @@ public class Main {
         ContactList contactList = new ContactList();
         String firstName;
         String lastName;
-        String[] contactNumber = new String[3];
         String email;
         boolean flag = true;
         while (flag == true) {
@@ -26,6 +25,7 @@ public class Main {
             scanner.nextLine();
             switch (number) {
                 case 1:
+                    String[] contactNumber = new String[3];
                     System.out.println("You have chosen to add a new contact: \n" +
                             "Please enter the name of the Person");
                     System.out.print("First Name: ");
@@ -36,12 +36,13 @@ public class Main {
                     contactList.setFirstNameInList(firstName);
                     System.out.print("Contact Number:");
                     contactNumber[0] = scanner.nextLine();
-                    for (int i = 1; i <= 2; i++) {
+
+                    for (int i = 0; i <= 2; i++) {
                         System.out.print("Would you like to add new Number (y/n): ");
                         char response = scanner.next().charAt(0);
                         if (response == 'y') {
                             System.out.print("Contact Number: ");
-                            contactNumber[i] = scanner.next();
+                            contactNumber[i + 1] = scanner.next();
                         } else {
                             break;
                         }
@@ -52,7 +53,7 @@ public class Main {
                         System.out.println("Enter the Email:");
                         email = scanner.next();
                     } else {
-                        break;
+                        email = null;
                     }
                     Person person = new Person(firstName, lastName, contactNumber, email);
 
