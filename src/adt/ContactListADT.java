@@ -2,7 +2,7 @@ package adt;
 
 import definition.Person;
 
-public interface ContactListADT<person> {
+public interface ContactListADT<Person> {
 
         boolean add(Person person);
 
